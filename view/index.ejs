@@ -1,0 +1,31 @@
+<%- include ('../public/parcial/header.ejs') %>
+    <body>
+ <%- include ('../public/parcial/navbar.ejs') %>
+
+   <div class="container">
+   <hr>
+   <h1>Perguntar</h1>
+   <hr>
+   <a href="/perguntar" class="btn btn-primary">Perguntar</a>
+   <hr>
+   <% tbperguntas.forEach(tbperguntas => { %>
+   <br>
+   <div class="card">
+   <div class="card-body">
+   <h3><%= tbperguntas.titulo %> </h3>
+   <p><%= tbperguntas.descricao %> </p>
+   </div>
+
+   <div class="card-footer">
+   <a href="./pergunta/<%= tbperguntas.id %>"</a><button class="btn btn-primary">Responder</button></a>
+      
+   </div>
+      
+   </div>
+
+<%   }) %>
+
+      
+   </div>
+    </body>
+ <%- include ('../public/parcial/footer.ejs') %>
